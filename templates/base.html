@@ -2,33 +2,33 @@
 <html lang='es'>
 <head>
   <meta charset='utf-8'>
-  <title>Sistema de Registro Central de Monitoreo - {% block titulo %}{% endblock %}</title>
-  <link rel='stylesheet' href='{{STATIC_URL}}css/base.css'>
-  <link rel='shortcut icon' href='{{STATIC_URL}}img/icono.png'>
-  {% block style_css %}{% endblock %}
-  <script src='{{STATIC_URL}}js/jquery-1.7.2.min.js'></script>
-  <script src='{{STATIC_URL}}js/demo.js'></script>
+  <title>Sistema de Registro Central de Monitoreo</title>
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/signin.css">
+	<link rel="stylesheet" href="/static/css/justified-nav.css">
 </head>
 <body>
   <header>
 	{% block encabezado %}{% endblock %}
-	<nav>
-	  <ul id='menu'>
-		  <li><a href='/'>Inicio</a></li>
-		  <li><a href='/usuarios'>Usuarios registrados</a></li>
-		  <li><a href='/recetas'>Recetas</a></li>
-      <li><a href="/comenta">Comenta</a></li>
-		  <li><a href='/sobre'>Sobre</a></li>
-      <li><a href="/contacto">Contactanos</a></li>
-    </ul>
-	</nav>
-	<hr>
+	<div class='container'>
+		<div class='masthead'>
+			<ul class='nav nav-justified'>
+				<li class='active'><a href='#'>Inicio</a></li> 
+				<li><a href='#'>Eventos</a></li>
+				<li><a href='#'>Claves</a></li>
+				<li><a href='#'>Sucursales</a></li>
+				<li><a href='#'>Empresas</a></li>
+				<li><a href='#'>Sistema</a></li>
+				<li><a href='#'></a></li>
+			</ul>
+		</div>
+	</div>
   </header>	
-  <section class='contenido'>
-	{% block contenido %}{% endblock %}
+  <section>
+	
   </section>
   <footer>
-	<p>Proyecto de ejemplo para el curso Django de Maestros del Web &copy;2012</p>
+	<p>Sistema de Registro de Eventos para Centrales de Monitoreo &copy;2014</p>
   </footer>
 </body>
 </html>

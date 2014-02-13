@@ -4,6 +4,7 @@ from django.template import RequestContext
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
+   
 
 def index(request):
 	return render_to_response('index.html')
@@ -35,6 +36,7 @@ def ingresar(request):
 def privado(request):
 	usuario = request.user
 	return render_to_response('privado.html', {'usuario':usuario}, context_instance=RequestContext(request))
+
 
 @login_required(login_url='/ingresar')
 def cerrar(request):

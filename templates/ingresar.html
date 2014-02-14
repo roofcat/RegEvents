@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html">
+{% extends 'base.html' %}
 <html lang="es">
 <head>
 	<title>ingresar</title>  
@@ -9,11 +9,12 @@
 <body>    
 	<div class='container'>
 		{% block contenido %}     
-		<form class='form-signin' id='formulario' name='formulario' method='POST' action=''> {% csrf_token %} 
+		<form class='form-signin' id='formulario' name='formulario' method='POST' action=''> {% csrf_token %}
+			<h2 class='form-signin-heading'>Control Acceso</h2>
 			<input type="text" placeholder='USUARIO' class='form-control' name="username">
 			<input type='password' placeholder='CLAVE' class='form-control' name='password'>
 			
-			<p><input class='btn btn-lg btn-primary' type="submit" value="Continue"></p>
+			<p><input class='btn btn-lg btn-primary btn-block' type="submit" value="Iniciar Sesión"></p>
 		</form>
 	 	{% endblock %}  
 	</div>

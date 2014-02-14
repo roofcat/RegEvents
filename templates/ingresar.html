@@ -2,15 +2,20 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="es">
 <head>
-	<title>ingresar</title>
+	<title>ingresar</title>  
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/signin.css">
 </head>
-<body>  
-	{% block contenido %}     
-	<form class='form-signin' id='formulario' method='POST' action=''> {% csrf_token %}
-		<table>{{formulario}}</table>
-
-		<p><input type="submit" value="Continue"></p>
-	</form>
- 	{% endblock %}
+<body>    
+	<div class='container'>
+		{% block contenido %}     
+		<form class='form-signin' id='formulario' name='formulario' method='POST' action=''> {% csrf_token %} 
+			<input type="text" placeholder='USUARIO' class='form-control' name="username">
+			<input type='password' placeholder='CLAVE' class='form-control' name='password'>
+			
+			<p><input class='btn btn-lg btn-primary' type="submit" value="Continue"></p>
+		</form>
+	 	{% endblock %}  
+	</div>
 </body>
 </html>

@@ -6,7 +6,7 @@
 </head>
 <body>  
 	{% block contenido %}     
-	<form id='formulario' method='POST' action=''> {% csrf_token %}
+	<form class='form-signin' id='formulario' method='POST' action=''> {% csrf_token %}
 		<table>{{formulario}}</table>
 
 		<p><input type="submit" value="Continue"></p>

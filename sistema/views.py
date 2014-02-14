@@ -42,3 +42,7 @@ def privado(request):
 def cerrar(request):
 	logout(request)
 	return HttpResponseRedirect('/')
+
+
+def about(request):
+	return render_to_response('about.html')

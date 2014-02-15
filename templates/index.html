@@ -5,14 +5,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title></title>
 </head>
-<body>     
+<body> 
+	{% block contenido %}    
 	<div class='container'>                  
-		<form class='form-signin' id='formulario' method='POST'> {% csrf_token %}		
-			<table>{{formulario}}</table>
-			<p><input type="submit" value="Entrar"></p>
-		</form>
-		
-	</div>>
-
+		<h2>Bienvenido</h2>	
+	</div>             
+	{% endblock %}
 </body>
 </html>

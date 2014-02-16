@@ -1,5 +1,4 @@
 <!DOCTYPE html">
-{% extends 'base.html' %}
 <html lang="es">
 <head>
 	<title>ingresar</title>  
@@ -10,7 +9,7 @@
 	<div class='container'>
 		{% block contenido %}     
 		<form class='form-signin' id='formulario' name='formulario' method='POST' action=''> {% csrf_token %}
-			<h2 class='form-signin-heading'>Control Acceso</h2>
+			<h2 class='form-signin-heading'>Control Acceso a RegEvents</h2>
 			<input type="text" placeholder='USUARIO' class='form-control' name="username">
 			<input type='password' placeholder='CLAVE' class='form-control' name='password'>
 			

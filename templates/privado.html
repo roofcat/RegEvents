@@ -10,21 +10,15 @@
 </head>           
 <body>
 	{% block contenido %}
-	<div class='container'>
-		<div class='jumbotron'>
-			<div class='row'>
-				<div class='col-md-3'>
-					<a href='#' class='thumbnail'>
-						<img data-src='holder.js/100%x180' alt='Profile Picture'>
-					</a>
-				</div>
-				<div class='col-md-6'>
-				  <h3>Bienvenido</h3>
-		  			<p class='leader'>Hola {{usuario.username|upper}}, tu último login fue   {{usuario.last_login}}.</p>   
-				</div>
-			</div>
-		</div>
+	
+	<div class="jumbotron">
+      <div class="container">
+        <h1>Bienvenido a RegEvents</h1>
+        <p>Sistema de Registro de Eventos y anomalías para Centrales de Monitoreo y Seguridad. Además, RegEvents, permite mantener en registro los colaboradores de la empresa para su posterior identificación en los distintos niveles de seguridad que pudiera tener su Empresa.</p>
+      </div>
 	</div>
+	
+	
 	{% endblock %}
 	<!-- Bootstrap core JavaScript================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

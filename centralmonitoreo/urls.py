@@ -9,7 +9,6 @@ urlpatterns = patterns('',
     
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^$', 'sistema.views.index'), 
-	url(r'^ingresar/$', 'sistema.views.ingresar', name='login'),
 	url(r'^privado/$', 'sistema.views.privado'), 
 	url(r'^cerrar/$', 'sistema.views.cerrar', name='logout'),
 	url(r'^about/$', 'sistema.views.about', name='about'),	

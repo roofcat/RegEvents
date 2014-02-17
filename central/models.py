@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Clave(models.Model): 
 	codigo = models.CharField(primary_key=True, max_length=60)
 	nombre = models.CharField(max_length=120)
-	descripcion = models.CharField(max_length=120)
+	descripcion = models.CharField(max_length=250)
 
 	def __unicode__(self):
 		return self.nombre

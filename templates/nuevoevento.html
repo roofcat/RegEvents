@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+{% extends 'base.html' %}
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Nuevo Evento</title> 
+	
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/signin.css">	
+</head>
+<body>                                                   
+	{% block contenido %}
+	
+	<div class='container'> 
+		<h2>Ingreso de Nuevo Evento a Sistema</h2>
+		<form class='form-group' id='formulario' method="POST" accept-charset="utf-8" action=''>
+			<p><input type="submit" value="Guardar"></p>
+		</form>
+	</div>
+	
+	{% endblock %}
+</body>
+</html>

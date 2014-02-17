@@ -40,5 +40,6 @@ def cerrar(request):
 	return HttpResponseRedirect('/')
 
 
+@login_required(login_url='/')
 def about(request):
 	return render_to_response('about.html')

@@ -4,13 +4,21 @@ from django.template import RequestContext
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
-from django.views.generic.edit import CreateView
+             
+from django.utils import timezone
 
-from central.models import Evento
+from central.forms import EventoForm
 
-   
-@login_required(login_url='/')
-class nuevoevento(CreateView):
-	model = Evento
-	template_name = 'nuevoevento.html'
-	success_url = '/'
+
+def nuevoevento(request):
+	if request == 'POST':
+		formulario = EventoForm(request.POST)
+		if formulario.is_valid():
+			formulario.save(commit=False)
+			formulario.usuario = requesr.user
+			formulario.fecha_registro = timezone.now()
+			formulario.save()
+			return HttpResponseRedirect('/nuevoevento')
+	else:
+		formulario = EventoForm()
+	return render_to_response('nuevoevento.html',{'formulario':formulario},context_instance=RequestContext(request))

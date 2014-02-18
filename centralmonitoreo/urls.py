@@ -1,6 +1,7 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, include, url                                
 
-from django.contrib import admin
+from django.contrib import admin                
+
 admin.autodiscover()                                
 
 from sistema.views import index
@@ -13,4 +14,6 @@ urlpatterns = patterns('',
 	url(r'^privado/$', 'sistema.views.privado'), 
 	url(r'^cerrar/$', 'sistema.views.cerrar', name='logout'),
 	url(r'^about/$', 'sistema.views.about', name='about'),
+	url(r'^nuevoevento/$', 'central.views.nuevoevento', name='nuevoevento'),
+	
 )

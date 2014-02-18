@@ -9,3 +9,5 @@ class EventoForm(ModelForm):
 	class Meta:
 		model = Evento
 		fields = ['clave', 'sucursal', 'observaciones']
+
+

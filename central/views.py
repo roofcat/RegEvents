@@ -19,10 +19,10 @@ def nuevoevento(request):
 		if formulario.is_valid():
 			evento = formulario.save(commit=False)
 			evento.usuario = request.usuario
-			evento.save()
+			evento.save()            
 			return HttpResponseRedirect('/nuevoevento')
 	else:
 		formulario = EventoForm()
-	return render_to_response('nuevoevento.html',{'formulario':formulario},context_instance=RequestContext(request, locals()))
+	return render_to_response('nuevoevento.html',{'formulario':formulario},context_instance=RequestContext(request))
 
 

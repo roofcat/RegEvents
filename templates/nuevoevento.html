@@ -18,8 +18,8 @@
 	<div class='container'> 
 		<h2>Ingreso de Nuevo Evento a Sistema</h2>
 		
-		<form class='form-group' id='formulario' name='formulario' method="POST" action=''> {% csrf_token %} 	
-			<table>{{formulario.as_p}}</table>                                     
+		<form class='form-group' id='evento_form' method="POST" action=''> {% csrf_token %}
+			<table>{{evento_form.as_p}}</table>                                     
 			<p><input class='btn btn-success' type="reset" value="Limpiar">
 			<input class='btn btn-success' type="submit" value="Guardar Registro"></p>
 		</form>

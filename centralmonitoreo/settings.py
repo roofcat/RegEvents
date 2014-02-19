@@ -76,7 +76,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'es-Cl'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 

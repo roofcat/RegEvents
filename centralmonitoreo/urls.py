@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()                                
 
 from sistema.views import index, cerrar, privado, about
-from central.views import nuevoevento, ClavesListView 
+from central.views import nuevoevento, ClavesListView, SucursalesListView 
 
 urlpatterns = patterns('',
     
@@ -16,5 +16,6 @@ urlpatterns = patterns('',
 	url(r'^about/$', 'sistema.views.about', name='about'),
 	url(r'^nuevoevento/$', 'central.views.nuevoevento', name='nuevoevento'),
 	url(r'^listaclaves/$', ClavesListView.as_view(), name='listaclaves'),
+	url(r'^listasucursales/$', SucursalesListView.as_view(), name='listasucursales'),
 	
 )

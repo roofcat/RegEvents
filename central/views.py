@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
              
 
-from .models import Clave
+from .models import Clave, Sucursal
 from .forms import EventoForm
 
   
@@ -27,4 +27,9 @@ def nuevoevento(request):
 class ClavesListView(ListView):
 	template_name = 'listarclaves.html'
 	model = Clave
+
+
+class SucursalesListView(ListView):
+	template_name = 'listarsucursales.html'
+	model = Sucursal
 	

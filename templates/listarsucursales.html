@@ -5,6 +5,8 @@
 <html lang="es">
 <head>
 	{% block title %} Listado de Sucursales para Eventos {% endblock %}
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+
 </head>
 <body>   
 	{% block contenido %}
@@ -12,12 +14,12 @@
 		<h3></h3>
     </div>
 
-	<div class='container table-responsive'>
+	<div class='container'>
 		<h2>Listado de Sucursales para Eventos</h2> 
-		<table class='table table-bordered'>
+		<table class='table table-bordered table-striped'>
 			<tr>
 				<th>CÓDIGO</th>
-				<th>NOMBRE</th>
+				<th>SUCURSAL</th>
 				<th>ACTIVA</th>
 			</tr>
 			{% for sucursal in object_list %}

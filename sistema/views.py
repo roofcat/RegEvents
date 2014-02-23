@@ -43,3 +43,7 @@ def cerrar(request):
 @login_required(login_url='/')
 def about(request):
 	return render_to_response('about.html')
+
+
+def verinfo(request):
+	pass
